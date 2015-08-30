@@ -7,7 +7,6 @@ r = requests.get('https://api.teksavvy.com/web/Usage/UsageSummaryRecords?$filter
 
 d = r.json()['value'][0]
 pd = d['OnPeakDownload']
-pu = d['OnPeakUpload']
 left = CAP - pd
 
 s = 'You have used '+str(pd)+'GB out of your '+str(CAP)+'GB limit'
